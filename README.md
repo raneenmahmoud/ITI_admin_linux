@@ -1,2 +1,1 @@
-# ITI_admin_linux
-# ITI_Red hat Tasks
+# ITI_admin_Red hat_linux
