@@ -1,0 +1,116 @@
+aneen@ubuntu:~$ mkdir iti-0
+raneen@ubuntu:~$ touch iti-0/file1.txt
+raneen@ubuntu:~$ echo "hell9 all" > iti-0/file1.txt
+raneen@ubuntu:~$ cat iti-0/file1.txt
+hell9 all
+raneen@ubuntu:~$ sed -i 's/9/o/g' iti-0/file1.txt
+raneen@ubuntu:~$ cat iti-0/file1.txt
+hello all
+raneen@ubuntu:~$ cat iti-0/file1.txt > iti-0/file2.txt
+raneen@ubuntu:~$ cat iti-0/file2.txt
+hello all
+raneen@ubuntu:~$ rm -r iti-0/file1.txt
+raneen@ubuntu:~$ cat iti-0/file1.txt
+cat: iti-0/file1.txt: No such file or directory
+raneen@ubuntu:~$ cat iti-0/file2.txt
+hello all
+raneen@ubuntu:~$ ^C
+
+raneen@ubuntu:~$ ls /
+bin    dev   lib    libx32      mnt   root  snap      sys  var
+boot   etc   lib32  lost+found  opt   run   srv       tmp
+cdrom  home  lib64  media       proc  sbin  swapfile  usr
+raneen@ubuntu:~$ ls /var
+backups  crash  local  log   metrics  run   spool
+cache    lib    lock   mail  opt      snap  tmp
+raneen@ubuntu:~$ ls /var > iti-0/listing.txt
+raneen@ubuntu:~$ cat iti-0/listin.txt
+cat: iti-0/listin.txt: No such file or directory
+raneen@ubuntu:~$ cat iti-0/listing.txt
+backups
+cache
+crash
+lib
+local
+lock
+log
+mail
+metrics
+opt
+run
+snap
+spool
+tmp
+raneen@ubuntu:~$ mv iti-0/listing.txt iti-0/list_output.txt
+raneen@ubuntu:~$ cat iti-0/listing.txt
+cat: iti-0/listing.txt: No such file or directory
+raneen@ubuntu:~$ cat iti-0/list_output.txt
+backups
+cache
+crash
+lib
+local
+lock
+log
+mail
+metrics
+opt
+run
+snap
+spool
+tmp
+raneen@ubuntu:~$ nl iti-0/list_output.txt
+     1	backups
+     2	cache
+     3	crash
+     4	lib
+     5	local
+     6	lock
+     7	log
+     8	mail
+     9	metrics
+    10	opt
+    11	run
+    12	snap
+    13	spool
+    14	tmp
+raneen@ubuntu:~$ cat iti-0/list_output.txt
+backups
+cache
+crash
+lib
+local
+lock
+log
+mail
+metrics
+opt
+run
+snap
+spool
+tmp
+raneen@ubuntu:~$ nl !$ > iti-0/list_output_number.txt
+nl iti-0/list_output.txt > iti-0/list_output_number.txt
+raneen@ubuntu:~$ cat iti-0/list_output_number.txt
+     1	backups
+     2	cache
+     3	crash
+     4	lib
+     5	local
+     6	lock
+     7	log
+     8	mail
+     9	metrics
+    10	opt
+    11	run
+    12	snap
+    13	spool
+    14	tmp
+raneen@ubuntu:~$ tail -n 5 iti-0/list_output_number.txt
+    10	opt
+    11	run
+    12	snap
+    13	spool
+    14	tmp
+
+
